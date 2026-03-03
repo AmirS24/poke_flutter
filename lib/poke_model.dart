@@ -10,9 +10,12 @@ class PokeModel {
   final double kg;
   final double height;
   final String moves;
+  final String types;
+  final String info;
 
 
-  PokeModel({required this.name, required this.number, required this.url, required this.ColorPoke, required this.kg, required this.height, required this.moves});
+
+  PokeModel({required this.name, required this.number, required this.url, required this.ColorPoke, required this.kg, required this.height, required this.moves, required this.types, required this.info});
 }
 
 List<PokeModel> getListPokemon(){
@@ -35,15 +38,15 @@ List<PokeModel> getListPokemon(){
   final aronUrl = "https://tse4.mm.bing.net/th/id/OIP.RiiPJumQuBn2aHbczCAy_QHaIj?rs=1&pid=ImgDetMain&o=7&rm=3";
 
   List<PokeModel> pokeList = [
-    PokeModel(name: "bulbasaur", number: "#001", url: bulbasaurUrl, ColorPoke: Colors.green, kg: 6.9, height: 0.7, moves: "Vine Whip"),
-    PokeModel(name: "Charmander", number: "#004", url: charmanderUrl, ColorPoke: Colors.orange, kg: 8.5, height: 0.4, moves: "Scratch"),
-    PokeModel(name: "Squirtle", number: "#007", url: squirtleUrl, ColorPoke: Colors.blue, kg: 9.0, height: 0.5, moves: "Water Gun"),
-    PokeModel(name: "Butterfree", number: "#012", url: butterfreeUrl, ColorPoke: Colors.lightGreenAccent, kg: 5.2, height: 1.1, moves: "Bug Bite"),
-    PokeModel(name: "Pikachu", number: "#025", url: pikachuUrl, ColorPoke: Colors.yellowAccent, kg: 6.0, height: 0.4, moves: "Thunderbolt"),
-    PokeModel(name: "Gastly", number: "#092", url: gastlyUrl, ColorPoke: Colors.deepPurple, kg: 0.1, height: 1.3, moves: "Lick"),
-    PokeModel(name: "Ditto", number: "#132", url: dittoUrl, ColorPoke: const Color(0xFFAAA67F), kg: 4.0, height: 0.3, moves: "Transform"),
-    PokeModel(name: "Mew", number: "#152", url: mewUrl, ColorPoke: const Color(0xFFFB5584), kg: 4.0, height: 0.4, moves: "Psychic"),
-    PokeModel(name: "Aron", number: "#304", url: aronUrl, ColorPoke: const Color(0xFFB7B9D0), kg: 60.0, height: 0.5,moves: "Bite"),
+    PokeModel(name: "bulbasaur", number: "#001", url: bulbasaurUrl, ColorPoke: Colors.green, kg: 6.9, height: 0.7, moves: "Vine Whip",types: "Grass",info : "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back."),
+    PokeModel(name: "Charmander", number: "#004", url: charmanderUrl, ColorPoke: Colors.orange, kg: 8.5, height: 0.4, moves: "Scratch", types: "Fire", info: "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail."),
+    PokeModel(name: "Squirtle", number: "#007", url: squirtleUrl, ColorPoke: Colors.blue, kg: 9.0, height: 0.5, moves: "Water Gun", types: "Water", info: "When it retracts its long neck into its shell, it squirts out water with vigorous force."),
+    PokeModel(name: "Butterfree", number: "#012", url: butterfreeUrl, ColorPoke: Colors.lightGreenAccent, kg: 5.2, height: 1.1, moves: "Bug Bite", types: "Bug", info: "Butterfree has a superior ability to search for delicious honey from flowers."),
+    PokeModel(name: "Pikachu", number: "#025", url: pikachuUrl, ColorPoke: Colors.yellowAccent, kg: 6.0, height: 0.4, moves: "Thunderbolt", types: "Electric", info: "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy."),
+    PokeModel(name: "Gastly", number: "#092", url: gastlyUrl, ColorPoke: Colors.deepPurple, kg: 0.1, height: 1.3, moves: "Lick", types: "Ghost", info: "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison."),
+    PokeModel(name: "Ditto", number: "#132", url: dittoUrl, ColorPoke: const Color(0xFFAAA67F), kg: 4.0, height: 0.3, moves: "Transform", types: "Normal", info: "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes."),
+    PokeModel(name: "Mew", number: "#152", url: mewUrl, ColorPoke: const Color(0xFFFB5584), kg: 4.0, height: 0.4, moves: "Psychic", types: "Psychic", info: "When viewed through a microscope, this Pokémon’s short, fine, delicate hair can be seen."),
+    PokeModel(name: "Aron", number: "#304", url: aronUrl, ColorPoke: const Color(0xFFB7B9D0), kg: 60.0, height: 0.5,moves: "Bite", types: "Rock", info: "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body."),
   ];
   return pokeList;
 }

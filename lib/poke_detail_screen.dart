@@ -42,7 +42,31 @@ class _PokeDetailScreenState extends State<PokeDetailScreen> {
             child: Image.network(widget.model.url,
             height: 300,
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: Row(
+              children: [
+                IconButton(onPressed: () => Navigator.pop(context),
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.white,),
+                ),
+
+                const SizedBox(width: 8),
+
+                Text(widget.model.name,
+                style: TextStyle(color: Colors.white,
+                fontSize: 35,
+                fontWeight: FontWeight.bold)
+                ),
+                const Spacer(),
+                Text(widget.model.number,
+                style: TextStyle(color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold)
+                )
+              ],
+            ),
+          ),
       ],),
 
     ));

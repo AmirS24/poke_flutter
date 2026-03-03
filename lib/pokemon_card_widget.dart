@@ -18,8 +18,8 @@ class _PokemonCardWidgetState extends State<PokemonCardWidget> {
       height: 150,
       width: 150,
       decoration: BoxDecoration(
-        color: Colors.green,
-        border: Border.all(color: Colors.green, width: 4),
+        color: Colors.white,
+        border: Border.all(color: widget.pokeModel.ColorPoke, width: 4),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(

@@ -7,8 +7,12 @@ class PokeModel {
   final String number;
   final String url;
   final Color ColorPoke;
+  final double kg;
+  final double height;
+  final String moves;
 
-  PokeModel({required this.name, required this.number, required this.url, required this.ColorPoke, required this.kg,});
+
+  PokeModel({required this.name, required this.number, required this.url, required this.ColorPoke, required this.kg, required this.height, required this.moves});
 }
 
 List<PokeModel> getListPokemon(){
@@ -31,16 +35,15 @@ List<PokeModel> getListPokemon(){
   final aronUrl = "https://tse4.mm.bing.net/th/id/OIP.RiiPJumQuBn2aHbczCAy_QHaIj?rs=1&pid=ImgDetMain&o=7&rm=3";
 
   List<PokeModel> pokeList = [
-    PokeModel(name: "bulbasaur", number: "#001", url: bulbasaurUrl, ColorPoke: Colors.green, kg: 6.9),
-    PokeModel(name: "Charmander", number: "#004", url: charmanderUrl, ColorPoke: Colors.orange, kg: 8.5 ),
-    PokeModel(name: "Squirtle", number: "#007", url: squirtleUrl, ColorPoke: Colors.blue, kg: 9.0),
-    PokeModel(name: "Butterfree", number: "#012", url: butterfreeUrl, ColorPoke: Colors.lightGreenAccent, kg: 5.2),
-    PokeModel(name: "Pikachu", number: "#025", url: pikachuUrl, ColorPoke: Colors.yellowAccent, kg: 6.0),
-    PokeModel(name: "Gastly", number: "#092", url: gastlyUrl, ColorPoke: Colors.deepPurple, kg: 0.1),
-    PokeModel(name: "Ditto", number: "#132", url: dittoUrl, ColorPoke: const Color(0xFFAAA67F), kg: 4.0),
-    PokeModel(name: "Mew", number: "#152", url: mewUrl, ColorPoke: const Color(0xFFFB5584), kg: 4.0),
-    PokeModel(name: "Aron", number: "#304", url: aronUrl, ColorPoke: const Color(0xFFB7B9D0), kg: 60.0),
-
+    PokeModel(name: "bulbasaur", number: "#001", url: bulbasaurUrl, ColorPoke: Colors.green, kg: 6.9, height: 0.7, moves: "Vine Whip"),
+    PokeModel(name: "Charmander", number: "#004", url: charmanderUrl, ColorPoke: Colors.orange, kg: 8.5, height: 0.4, moves: "Scratch"),
+    PokeModel(name: "Squirtle", number: "#007", url: squirtleUrl, ColorPoke: Colors.blue, kg: 9.0, height: 0.5, moves: "Water Gun"),
+    PokeModel(name: "Butterfree", number: "#012", url: butterfreeUrl, ColorPoke: Colors.lightGreenAccent, kg: 5.2, height: 1.1, moves: "Bug Bite"),
+    PokeModel(name: "Pikachu", number: "#025", url: pikachuUrl, ColorPoke: Colors.yellowAccent, kg: 6.0, height: 0.4, moves: "Thunderbolt"),
+    PokeModel(name: "Gastly", number: "#092", url: gastlyUrl, ColorPoke: Colors.deepPurple, kg: 0.1, height: 1.3, moves: "Lick"),
+    PokeModel(name: "Ditto", number: "#132", url: dittoUrl, ColorPoke: const Color(0xFFAAA67F), kg: 4.0, height: 0.3, moves: "Transform"),
+    PokeModel(name: "Mew", number: "#152", url: mewUrl, ColorPoke: const Color(0xFFFB5584), kg: 4.0, height: 0.4, moves: "Psychic"),
+    PokeModel(name: "Aron", number: "#304", url: aronUrl, ColorPoke: const Color(0xFFB7B9D0), kg: 60.0, height: 0.5,moves: "Bite"),
   ];
   return pokeList;
 }

@@ -12,16 +12,18 @@ class PokeScreen extends StatefulWidget {
 }
 
 class _PokeScreenState extends State<PokeScreen> {
+
+  final List<PokeModel> listPoke = getListPokemon();
+
   @override
   Widget build(BuildContext context) {
-    final listPoke = getListPokemon();
     return SafeArea(
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(Icons.catching_pokemon, size: 40),
                   SizedBox(width: 16),
@@ -33,28 +35,31 @@ class _PokeScreenState extends State<PokeScreen> {
                   Icon(Icons.arrow_downward, size: 40),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Expanded(
                 child: GridView.builder(
+                  itemCount: listPoke.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 8,
+                    mainAxisSpacing: 8,
+                  ),
                   itemBuilder: (context, index) {
                     final item = listPoke[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => PokeDetailScreen(model: item),
+                            builder: (context) => PokeDetailScreen(
+                              pokeList: listPoke, 
+                              index: index,
+                            ),
                           ),
                         );
                       },
                       child: PokemonCardWidget(pokeModel: item),
                     );
                   },
-                  itemCount: listPoke.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 8,
-                    mainAxisSpacing: 8,
-                  ),
                 ),
               ),
             ],
